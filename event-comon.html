@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" ckass="input-name">
+    <button id="update-name">Update</button>
+
+    <p id="clicking-mathod"></p>
+    <button onclick="handleJustfunctionClick()">just function</button>
+    <button id="handle-event">Direct add event listener</button>
+
+    <!-- script  -->
+    <script>
+        function handleJustfunctionClick() {
+            const p = document.getElementById('clicking-mathod');
+            p.innerText = 'set by using function'
+        }
+        //direct event
+        document.getElementById('handle-event').addEventListener('click', function () {
+            const p = document.getElementById('clicking-mathod');
+            p.innerText = "clicking direct event function "
+        })
+        //direct
+        const namefield = document.getElementById('ubdate-name');
+        console.log(namefield.value);
+    </script>
+</body>
+
+</html>
